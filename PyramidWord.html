@@ -2,11 +2,11 @@
     the user input is a pyramid word. -->
 <html>
         <body>
-            <form>
-                Enter a word: (only letters accepted)<br>
-                <input type = "text" name = "userInput" pattern = "[A-Za-z]"><br>
-                <button id = "button">Test</button>
-            </form>
+            Enter a word: (only letters accepted)<br>
+            <input type = "text" name = "userInput" onclick = "validateForm()"><br>
+            <button id = "button">Test</button><br>
+
+            <p id = "result"></p>
 
             <script src = "PyramidWord.js" type = "module"></script>
         </body>
