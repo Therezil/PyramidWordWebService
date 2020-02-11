@@ -1,13 +1,11 @@
 /* 
     JavaScript function that is meant to check if user input is a pyramid word or not.
 */
-let button = document.getElementById("button");
-let userInput = document.getElementById("userInput");
 
 // Function that checks to see if userInput is valid. Then calls PyramidCheck() if
 // user entered a proper word.
 function validateForm() {
-    let userText = userInput.value;
+    let userText = document.getElementById("userInput").value;
     let test = /\d/;
 
     if (test.test(userText) || userText.includes(" ")) {
