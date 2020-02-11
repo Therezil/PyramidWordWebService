@@ -22,13 +22,12 @@ window.onload = function() {
 }
 
 function isPyramidWord(userText) {
-    let chars = userText.split();
     let charsTracker = [];
     let charsCount = [];
 
-    for (i = 0; i < chars.length; ++i) {
-        if (charsTracker.includes(chars[i])) {
-            let j = charsTracker.indexOf(chars[i]);
+    for (i = 0; i < userText.length; ++i) {
+        if (charsTracker.includes(userText.charAt(i))) {
+            let j = charsTracker.indexOf(userText.charAt(i));
 
             charsCount[j]++;
         } else {
