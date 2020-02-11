@@ -10,8 +10,22 @@ window.onload = function() {
 
         if (test.test(userText) || userText.includes(" ")) {
             document.getElementById("result").innerHTML = "Not valid input.";
+            return false;
         } else {
-            document.getElementById("result").innerHTML = "Valid";
+            if (isPyramidWord(userText)) {
+                document.getElementById("result").innerHTML = "This is a pyramid word.";
+            } else {
+                document.getElementById("result").innerHTML = "This is not a pyramid word.";
+            }
         }
     }
+}
+
+function isPyramidWord(userText) {
+    let chars = userText.split("");
+    let charsCount = [];
+
+    chars.array.forEach(letter => {
+        
+    });
 }
