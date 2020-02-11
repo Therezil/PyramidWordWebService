@@ -22,10 +22,22 @@ window.onload = function() {
 }
 
 function isPyramidWord(userText) {
-    let chars = userText.split("");
+    let chars = userText.split();
+    let charsTracker = [];
     let charsCount = [];
 
-    chars.array.forEach(letter => {
-        
-    });
+    for (i = 0; i < chars.length; ++i) {
+        if (charsTracker.includes(chars[i])) {
+            let j = charsTracker.indexOf(chars[i]);
+
+            charsCount[j]++;
+        } else {
+            charsTracker.push(chars[i]);
+            charsCount.push(1);
+        }
+    }
+    
+    document.getElementById("result").innerHTML = charsTracker.toString();
+    document.getElementById("result").innerHTML = charsCount.toString();
+    return true;
 }
